@@ -7,18 +7,13 @@
 <body>
 
 <!--topbar-->
-<script>
-    function find() {
-        var id=document.getElementById("serch_id").valueOf;
-        return id;
-    }
-</script>
+
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" id="topbar">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">[[${session.loginUser}]]</a>
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" id="serch_id" name="serch_id">
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#">Sign out</a>
+            <button class="btn btn-sm btn-primary" id="serch_click" onclick="Serch_id()">Sign out</button>
         </li>
     </ul>
 </nav>

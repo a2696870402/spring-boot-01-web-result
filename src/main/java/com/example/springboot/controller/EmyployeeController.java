@@ -27,6 +27,7 @@ public class EmyployeeController {
     public String getlist(Model model,@PathVariable("id") Integer id){
         Collection<Employee> employeeDaoAll=new ArrayList<>();
         Employee employee = employeeDao.get(id);
+        System.out.println("查找id= "+id+" 的员工");
         employeeDaoAll.add(employee);
         //放在请求域中，页面中共享
         model.addAttribute("emps",employeeDaoAll);

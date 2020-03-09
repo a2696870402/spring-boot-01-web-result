@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -94,8 +93,10 @@
     ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
-		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/webjars/popper.js/1.14.1/dist/popper.js}"></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/webjars/popper.js/1.14.3/popper.js}"></script>
 		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.js}"></script>
+
+		<!--<script type="text/javascript" src="asserts/js/myjs.js" th:src="@{/asserts/js/myjs.js}"></script>-->
 
 		<!-- Icons -->
 		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
@@ -109,6 +110,22 @@
 			    $("#deleteEmpForm").attr("action",$(this).attr("del_uri")).submit();
 			    return false;
             });
+			function f() {
+				alert("这是主页的js");
+			}
+			function Serch_id () {
+				var s_id=$("#serch_id").val();
+				var click_a=$("#serch_click").value;
+				alert("开始ajax"+s_id);
+				$.ajax({
+					type:"GET",
+					url:/emps/+s_id,
+					success:function a() {
+					alert("查找成功");
+				}
+			});
+			}
 		</script>
+
 	</body>
 </html>
